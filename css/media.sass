@@ -1,0 +1,1481 @@
+$blue: #6BC2D6
+$darkBlue: #103B66
+$gray: #D9D9D9
+
+$gradient: linear-gradient(to right, #5FC3E3, #3399C1)
+$boxShadow: 3px 3px 4px 0 rgba(#8c8e8c, 0.75)
+$btnHoverShadow: 3px 3px 4px 0 rgba(#8c8e8c, 1)
+
+
+@charset "UTF-8"
+
+/* Portrait tablets and medium desktops */
+// До 1199px включительно (Начиная с 992px)
+@media (max-width: 1199px)
+  // Шапка
+  header
+    .header__top
+      .container
+        grid-gap: 40px
+        .right
+          grid-gap: 0 30px
+          .menu
+            order: 1
+            flex-direction: column
+            grid-gap: 10px
+            &__item
+              &:before
+                width: 36px
+                height: 36px
+              .info
+                .label
+                  font-size: 14px
+                .text
+                  font-size: 15px
+          .feedback-and-soc-list
+            grid-gap: 10px 30px
+            .feedback
+              padding: 10px 20px
+              &:before
+                background-size: 14px
+            .soc-list
+              .soc__item
+                .soc-icon
+                  width: 36px
+                  height: 36px
+
+  /* Well Help */
+  #well-help
+    .will-help
+      .tabs
+        .tabContents-block
+          .tabContent
+            .content
+              .limitation-container
+                .limitation-list
+                  grid-gap: 15px
+                  .limitation
+                    .length
+                      &:before
+                        margin-left: -16px
+
+
+  // Download
+  #download
+    .download
+      grid-template-areas: "img1 title title" "img1 info img2"
+      grid-gap: 0 20px
+      .header
+        align-self: end
+        grid-area: title
+        .title
+          margin-top: 0
+
+
+  // Countries
+  #countries
+    .table
+      table
+        thead
+          tr
+            td
+              padding: 26px 1px
+        tbody
+          tr
+            td
+              padding: 26px 12px
+              &:first-child
+                padding: 20px 15px 20px 30px
+                .flag
+                  span
+                    font-size: 13px
+
+
+  // Surrogacy
+  #surrogacy
+    .surrogacy-list
+      .surrogacy
+        &__info
+          padding: 0 25px 25px
+
+
+  // FAQ
+  #faq
+    .faq-container
+      grid-gap: 0 20px
+      .right
+        .accordion-list
+          padding-right: 20px
+
+
+  // Карта
+  #map
+    .country-selection
+      left: calc(50% - 475px)
+
+
+/* Portrait tablets and small desktops */
+// До 991px включительно (Начиная с 768px)
+@media (max-width: 991px)
+  // Шапка
+  header
+    .header__top
+      .container
+        .right
+          grid-gap: 0 40px
+          .feedback-and-soc-list
+            align-items: center
+            flex-direction: column-reverse
+
+
+  // Контент
+  main
+    section
+      padding: 50px 0 50px
+      .header
+        max-width: 600px
+        .title
+          font-size: 32px
+        .description
+          font-size: 18px
+          line-height: 1.3
+
+
+  // Home
+  #home
+    padding: 140px 0
+
+
+  // About
+  #about
+    .about-list
+      margin: 0 auto -80px
+      grid-gap: 0 15px
+      transform: translateY(-150px)
+      &__item
+        padding: 20px
+        background-size: 60px, 76px
+        background-position: 18px 25px, 14px 12px
+        .number
+          font-size: 52px
+        .title
+          margin: 10px 0 15px
+          font-size: 22px
+        .description
+          line-height: 1.5
+
+
+  // Well Help
+  #well-help
+    .will-help
+      .tabs
+        .tabs-block
+          .tab
+            padding: 10px 0
+            &:before
+              width: 36px
+              height: 36px
+              mask-size: 100% auto
+            &:nth-child(4)
+              &:before
+                mask-size: auto 100%
+        .tabContents-block
+          .tabContent
+            padding: 20px 10px 30px
+            .content
+              grid-template-columns: repeat(2, 1fr)
+              grid-gap: 50px 15px
+              .img-block
+                img
+                  height: 300px
+                .description
+                  padding: 20px
+              .info-block
+                .title
+                  font-size: 22px
+              .limitation-container
+                & > .title
+                  margin: 0 0 40px
+                .limitation-list
+                  .limitation
+                    .title
+                      font-size: 18px
+                    .length
+                      margin: 15px 0
+                      &:before
+                        margin-left: -7px
+                    .description
+                      font-size: 13px
+                      line-height: 1.3
+
+
+  // Download
+  #download
+    .download
+      background-size: 440px
+      background-image: url("../img/bg/download.png")
+      .img1
+        height: 260px
+      .img2
+        height: 230px
+
+
+  // Countries
+  #countries
+    .table
+      table
+        thead
+          tr
+            td
+              padding: 20px 20px
+              font-size: 15px
+              &:first-child
+                padding: 20px 20px
+              &:last-child
+                padding: 20px 20px
+        tbody
+          tr
+            &:last-child
+              td,
+              td:first-child,
+              td:last-child
+                padding-bottom: 20px
+            td
+              padding: 15px 12px
+              &:first-child
+                padding: 15px
+                .flag
+                  display: flex
+                  flex-direction: column
+                  grid-gap: 8px
+                  span
+                    font-size: 12px
+                    text-align: center
+
+
+  // Feedback
+  #feedback
+    .feedback-block
+      padding: 50px 30px 50px 120px
+      background-size: 190px 330px, 100%
+      .header
+        .description
+          font-size: 16px
+          line-height: 1.4
+      form
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 12px
+        input:not(.btn)
+          padding: 0 10px
+          height: 44px
+        .select
+          &:after
+            right: 10px
+          select
+            padding: 0 26px 0 10px
+            height: 44px
+        .btn
+          margin: 0
+          height: 44px
+
+
+  // Surrogacy
+  #surrogacy
+    .surrogacy-list
+      .surrogacy
+        padding-top: 120px
+        background-size: contain
+        &__info
+          padding: 0 15px 15px
+          grid-gap: 20px
+          .tooltip
+            padding: 20px 15px
+          .title
+            font-size: 22px
+          .btn
+            padding: 12px
+            font-size: 11px
+
+
+  // Download 2
+  #download2
+    .download2
+      padding: 40px 30px
+      height: 400px
+      background-position: 20% 15%
+
+
+  // Our Teams
+  #team
+    .team
+      video
+        width: 360px
+        height: 260px
+      .description
+        margin-top: 20px
+        font-size: 14px
+      picture
+        .name
+          left: 70px
+        .img-user
+          padding-top: 118px
+    .team-list
+      grid-gap: 15px
+      &__item
+        padding: 25px 20px
+        .title
+          font-size: 22px
+        .description
+          font-size: 14px
+          line-height: 1.5
+
+
+  // Our Doctors
+  #our-doctors
+    .doctors
+      margin: 0
+      .list
+        grid-template-columns: repeat(4, 1fr)
+        .info
+          grid-column: 1 / 5
+          order: -1
+          .title
+            margin: 0
+          .center-block
+            display: none
+
+
+  // FAQ
+  #faq
+    .faq-container
+      .right
+        .accordion-list
+          grid-gap: 20px
+
+
+  // Контакты
+  #contacts
+    .contacts
+      .left
+        .title
+          font-size: 24px
+        form
+          margin-top: 30px
+          input:not(.btn)
+            padding: 10px
+            height: 44px
+            font-size: 14px
+            &::placeholder
+              color: #94979D
+              font-size: 14px
+          textarea
+            padding: 10px
+            font-size: 14px
+            &::placeholder
+              font-size: 14px
+      .right
+        .contacts-list
+          &__item
+            a
+              &:before
+                width: 100px
+                height: 100px
+            .description
+              margin: 5px 0 0
+              font-size: 14px
+            &.tel
+              a
+                font-size: 20px
+
+
+  // Карта
+  #map
+    height: 500px
+    position: static
+    display: grid
+    grid-template-columns: 300px auto
+    box-shadow: 0 -1px 3px 0 rgba(#6BC2D6, 0.75)
+    .country-selection
+      margin: 0
+      width: 300px
+      position: static
+      .logo
+        margin: 20px auto 0
+      .tabs
+        height: 100%
+        display: flex
+        flex-direction: column
+        .tabContents-block
+          .tabContent
+            padding: 20px 20px 40px
+
+
+  #modal-steps
+    .content
+      padding: 60px
+      .journal
+        &__item
+          &.doctor
+            padding: 20px
+
+
+
+/* Landscape phones and portrait tablets */
+// До 767px включительно (от 576px)
+@media (max-width: 767px)
+  #page1,
+  #page2,
+  #page3,
+  #page4
+    background-image: none
+
+
+  .container
+    padding: 0 15px
+
+  // Шапка
+  header
+    .header__top
+      padding: 10px 0 8px
+      .container
+        .burger-menu
+          display: flex
+        .logo
+          img
+            height: 60px
+        .right
+          display: none
+    .header__bottom
+      width: 100%
+      padding: 0
+      position: absolute
+      top: 83px
+      background-color: $blue
+      box-shadow: 0 2px 8px 0 rgba($blue, 0.5)
+      z-index: 1
+      .container
+        .menu
+          padding: 20px 0
+          display: none
+          flex-direction: column
+          flex-wrap: nowrap
+          grid-gap: 12px
+          &__item
+            a
+              color: #ffffff
+
+
+  main
+    margin-top: 68px
+    section
+      .header
+        max-width: 75%
+
+
+  // Home
+  #home
+    padding-top: 80px
+    .title
+      font-size: 38px
+
+
+  // About
+  #about
+    .about-list
+      grid-gap: 0 12px
+      &__item
+        padding: 12px
+        background-size: 50px, 60px
+        background-position: 15px 15px, 15px 12px
+        .number
+          font-size: 42px
+        .title
+          margin: 10px 0 12px
+          font-size: 18px
+        .description
+          font-size: 13px
+          line-height: 1.4
+
+
+  // Well Help
+  #well-help
+    .will-help
+      .accordion
+        display: block
+        background-color: $blue
+        .accordion__item + .accordion__item
+          .accordion__title
+            border-top: 2px dashed #ffffff
+        &__item
+          padding: 0 20px
+          .accordion__title
+            margin: 0
+            padding: 20px 12px
+            color: #ffffff
+            font-size: 20px
+            display: flex
+            align-items: center
+            grid-gap: 20px
+            &:before
+              content: ""
+              width: 50px
+              height: 50px
+              display: inline-block
+              mask-repeat: no-repeat
+              mask-position: center
+              background-color: #ffffff
+              transition: all 200ms ease-in-out
+            &:after
+              content: ""
+              margin-left: auto
+              width: 15px
+              height: 9px
+              display: inline-block
+              background-size: 15px 9px
+              background-repeat: no-repeat
+              background-position: center
+              background-image: url("../img/icons/arrow-down.png")
+          &:nth-child(1)
+            .accordion__title
+              &:before
+                mask-image: url("../img/icons/lgbt.png")
+          &:nth-child(2)
+            .accordion__title
+              &:before
+                mask-image: url("../img/icons/married.png")
+          &:nth-child(3)
+            .accordion__title
+              &:before
+                mask-image: url("../img/icons/unmarried.png")
+          &:nth-child(4)
+            .accordion__title
+              &:before
+                mask-image: url("../img/icons/single.png")
+          .accordion__body
+            display: none
+            &:first-child
+              display: block
+        .accordion__body
+          padding: 20px 0
+          margin: 0 -20px
+          background-color: #ffffff
+          .content
+            display: grid
+            grid-template-columns: 1fr
+            grid-gap: 60px 15px
+            align-items: start
+            .img-block
+              width: 100%
+              display: flex
+              flex-direction: column
+              border-radius: 10px
+              overflow: hidden
+              img
+                height: auto
+                width: 100%
+                object-fit: cover
+              .description
+                margin: 0
+                padding: 25px 20px
+                color: #ffffff
+                font-size: 16px
+                background-color: $blue
+            .info-block
+              .title
+                margin: 0 0 20px
+                color: $darkBlue
+                font-size: 25px
+                font-weight: 400
+              .countries-list
+                margin-bottom: 20px
+                display: flex
+                flex-wrap: wrap
+                grid-gap: 20px
+                .countries
+                  display: flex
+                  flex-direction: column
+                  align-items: center
+                  grid-gap: 8px
+                  img
+                    width: 42px
+                    height: 24px
+                  .name
+                    color: #999999
+                    font-size: 12px
+                    text-transform: uppercase
+              section
+                padding: 0
+                .title
+                  margin: 16px 0
+                  font-size: 20px
+                  font-weight: 500
+                .description
+                  color: #7B7D7D
+                  font-size: 16px
+                ul
+                  margin: 0
+                  padding-left: 0
+                  list-style: none
+                  display: grid
+                  grid-template-columns: repeat(2, 1fr)
+                  grid-gap: 20px
+                  li
+                    color: #747575
+                    font-size: 15px
+                    line-height: 1.3
+                    display: flex
+                    grid-gap: 10px
+                    &:before
+                      content: ""
+                      padding-bottom: 10px
+                      width: 16px
+                      min-width: 16px
+                      height: 14px
+                      transform: translateY(-3px)
+                      display: inline-block
+                      background-size: 16px
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-image: url("../img/icons/check.png")
+                .price
+                  margin-top: 20px
+                  position: relative
+                  color: $darkBlue
+                  font-size: 20px
+                  font-weight: 500
+                  display: inline-block
+                  .number
+                    font-size: 24px
+                    font-weight: 700
+                  .warning
+                    margin-left: 2px
+                    transform: translateY(-6px)
+                    cursor: pointer
+                    &:hover + .tooltip
+                      opacity: 1
+                      visibility: visible
+                  .tooltip
+                    padding: 10px 20px
+                    min-width: 200px
+                    position: absolute
+                    bottom: 40px
+                    right: 0
+                    transform: translateX(calc(50% - 7px))
+                    color: #ffffff
+                    font-size: 13px
+                    line-height: 1.6
+                    background-color: $darkBlue
+                    box-sizing: border-box
+                    visibility: hidden
+                    opacity: 0
+                    z-index: 1
+                    transition: all 300ms ease-in-out
+                    &:before
+                      content: ""
+                      position: absolute
+                      bottom: -15px
+                      left: 50%
+                      transform: translateX(-50%)
+                      border: 8px solid transparent
+                      border-top: 10px solid $darkBlue
+            .limitation-container
+              padding: 0
+              & > .title
+                margin: 0 0 50px
+                color: $darkBlue
+                font-size: 25px
+                font-weight: 500
+                text-align: center
+              .limitation-list
+                margin: 0 auto
+                max-width: 940px
+                display: grid
+                grid-template-columns: repeat(3, 1fr)
+                grid-gap: 24px
+                .limitation
+                  .title
+                    margin: 0
+                    color: $darkBlue
+                    font-size: 17px
+                    font-weight: 500
+                  .length
+                    margin: 16px 0
+                    display: flex
+                    grid-gap: 10px
+                    background-size: 100%
+                    background-position: center
+                    background-repeat: no-repeat
+                    background-image: url("../img/icons/dashed.png")
+                    &:before
+                      content: ""
+                      margin-left: 0
+                      width: 35px
+                      height: 35px
+                      display: inline-block
+                      border-radius: 50%
+                      background-size: 27px
+                      background-color: $darkBlue
+                      background-position: center
+                      background-repeat: no-repeat
+                      background-image: url("../img/icons/sperm.png")
+                      box-shadow: 0 0 0 4px rgba($blue, 0.4)
+                    .count
+                      color: $blue
+                      font-size: 12px
+                      font-weight: 500
+                  .description
+                    margin: 0
+                    color: #7B7D7D
+                    font-size: 14px
+                    line-height: 1.4
+    .tabs
+      display: none
+
+
+  // Download
+  #download
+    .container
+      background-image: none
+    .download
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-areas: "title title" "img1 img2" "info info"
+      grid-gap: 0
+      background-size: 400px
+      background-position: left 50% top 60px, right top 40px
+      .header
+        justify-self: center
+        grid-area: title
+        .title
+          margin-top: 0
+      .info
+        order: 1
+        justify-self: center
+        display: flex
+        flex-direction: column
+        align-items: center
+        .btn
+          margin-left: 0
+          text-align: center
+      .img1
+        justify-self: end
+
+
+  // Feedback
+  #feedback
+    .feedback-block
+      padding: 40px 20px 40px 110px
+      background-size: 175px 315px, 100%
+      .header
+        .description
+          font-size: 15px
+          line-height: 1.4
+      form
+        margin-top: 30px
+        grid-gap: 10px
+        input:not(.btn)
+          padding: 0 10px
+          height: 40px
+        .select
+          &:after
+            right: 10px
+          select
+            padding: 0 26px 0 10px
+            height: 40px
+        .btn
+          margin-left: 0
+          height: 40px
+          font-size: 12px
+
+
+  // Surrogacy
+  #surrogacy
+    .surrogacy-list
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 60px 20px
+
+
+  // Download 2
+  #download2
+    .download2
+      padding: 30px 20px
+      height: 340px
+      background-position: 30% 20%
+      .title
+        b
+          color: $blue
+      .steps
+        margin: 30px 0 60px
+
+
+  // Our Teams
+  #team
+    .header
+      margin: 0 auto
+      .title
+        text-align: center !important
+        &:before
+          margin: 0 auto 10px
+    .team
+      grid-template-columns: 1fr
+      grid-template-areas: "header" "img" "video" "description"
+      grid-gap: 20px
+      video
+        margin: 0 auto
+        max-width: 420px
+        width: 100%
+        height: 260px
+      .description
+        margin-top: 12px
+        font-size: 16px
+      picture
+        margin: 0 auto
+        .name
+          top: 170px
+          left: 70px
+          font-size: 14px
+        .img-user
+          max-width: 400px
+          width: 100%
+    .team-list
+      grid-template-columns: repeat(2, 1fr)
+
+
+  // Our Doctors
+  #our-doctors
+    .doctors
+      margin: 0
+      .list
+        grid-template-columns: repeat(2, 1fr)
+        .info
+          grid-column: 1 / 3
+          order: -1
+          grid-gap: 0
+          .title
+            margin: 0
+          .center-block
+            display: none
+
+
+  // FAQ
+  #faq
+    padding-top: 90px
+    .faq-container
+      margin-top: 0
+      padding: 0 20px
+      grid-template-columns: 1fr
+      .left
+        display: none
+      .right
+        max-width: 100%
+        .accordion-list
+          padding: 0
+
+
+  // Контакты
+  #contacts
+    .contacts
+     .left
+       .title
+         font-size: 22px
+       form
+         margin-top: 25px
+         grid-template-columns: 1fr
+         textarea
+           grid-row: auto
+           grid-column: auto
+         .btn
+           width: 100%
+           grid-row: auto
+           grid-column: auto
+
+
+  // Карта
+  #map
+   height: 450px
+   grid-template-columns: 250px auto
+   .country-selection
+     width: 250px
+     .logo
+       margin: 20px auto 0
+     .tabs
+       height: 100%
+       display: flex
+       flex-direction: column
+       .tabContents-block
+         .tabContent
+           padding: 12px 12px 40px
+           .title
+             font-size: 20px
+           .description
+             font-size: 14px
+           .horizontal-line
+             margin: 20px auto 20px
+           ul
+             li + li
+               margin-top: 10px
+             li
+               font-size: 14px
+               a
+                 font-size: 14px
+               &:before
+                 font-size: 15px
+
+
+  .modal-user
+    .content
+      .user
+        padding: 20px
+        grid-gap: 15px
+
+
+  #modal-steps
+    .content
+      padding: 40px
+      background-image: none
+      .close
+        top: 20px
+        right: 20px
+      .steps
+        margin: 30px auto 40px
+        grid-gap: 60px
+        .step
+          width: 46px
+          height: 46px
+          &__number
+            font-size: 16px
+          &__text
+            font-size: 10px
+      .journal
+        grid-template-columns: 1fr
+        &__item
+          &.description
+            padding: 0
+            margin-bottom: 20px
+          &.img
+            img
+              border-radius: 12px 12px 0 0
+          &.doctor
+            padding: 20px
+            border-radius: 0 0 12px 12px
+          &.review
+            margin-top: 20px
+            padding: 0
+
+
+/* sm-устройства (до 576px включительно) */
+@media (max-width: 575px)
+  .btn
+    padding: 14px 40px
+    color: #ffffff
+    font-size: 14px
+
+
+  .container
+    padding: 0 15px
+
+
+  // Шапка
+  header
+    .header__top
+      padding: 8px 0 6px
+      .container
+        .logo
+          img
+            height: 50px
+    .header__bottom
+      top: 69px
+
+
+  main
+    section
+      padding: 20px 0
+      .header
+        margin-bottom: 30px
+        .title
+          font-size: 28px
+        .description
+          font-size: 16px
+
+
+  // Home
+  #home
+    padding: 80px 0 40px
+    .title
+      margin: 30px auto 50px
+      font-size: 32px
+
+
+  // About
+  #about
+    .about-list
+      margin: 0
+      padding: 20px
+      grid-template-columns: 1fr
+      grid-gap: 15px
+      transform: none
+      &__item
+        padding: 20px
+        background-size: 50px, 60px
+        background-position: 15px 15px, 15px 12px
+        .number
+          font-size: 46px
+        .title
+          margin: 10px 0
+          font-size: 18px
+        .description
+          font-size: 13px
+          line-height: 1.4
+
+
+  // Well Help
+  #well-help
+    .will-help
+      .accordion
+        &__item
+          .accordion__title
+            &:before
+              width: 40px
+              height: 40px
+              mask-size: 40px
+          &:nth-child(4)
+            .accordion__title
+              &:before
+                mask-size: auto 40px
+          .accordion__body
+            .content
+              grid-gap: 40px
+              .img-block
+                border-radius: 8px
+                .description
+                  padding: 15px 12px
+                  font-size: 14px
+              .limitation-container
+                margin-top: 20px
+                .title
+                  margin-bottom: 26px
+                .limitation-list
+                  grid-template-columns: repeat(2, 1fr)
+                  grid-gap: 40px 12px
+
+
+
+  // Download
+  #download
+    .download
+      background-size: 280px, 30px
+      background-position: left 50% top 150px, right 20px top 100px
+      overflow: hidden
+      .header
+        .title
+          text-align: center
+          &:before
+            margin: 0 auto 10px
+      .info
+        ul
+          li
+            font-size: 14px
+      .img1
+        height: 240px
+      .img2
+        height: 200px
+
+
+  // Countries
+  #countries
+    .table
+      border-radius: 20px
+      table
+        thead
+          tr
+            td
+              padding: 12px 8px
+              font-size: 9px
+              &:first-child
+                padding: 12px 8px
+              &:last-child
+                padding: 12px 8px
+        tbody
+          tr
+            &:last-child
+              td,
+              td:first-child,
+              td:last-child
+                padding-bottom: 12px
+            td
+              padding: 10px 0
+              font-size: 12px
+              &:first-child
+                padding: 10px 10px 15px 10px
+                .flag
+                  display: flex
+                  flex-direction: column
+                  grid-gap: 8px
+                  img
+                    width: 34px
+                    height: 20px
+                  span
+                    padding-left: 8px
+                    font-size: 10px
+                    text-align: left
+
+
+  // Feedback
+  #feedback
+    .feedback-block
+      padding: 40px 12px 30px
+      background-size: 175px 315px, 100%
+      background-position: 0 -50px, center
+      .header
+        .title
+          text-align: center
+        .description
+          padding-left: 30px
+          padding-right: 30px
+          font-size: 14px
+          line-height: 1.4
+      form
+        margin-top: 30px
+        grid-template-columns: 1fr
+        grid-gap: 10px
+        input:not(.btn)
+          padding: 0 10px
+          height: 50px
+        .select
+          &:after
+            right: 10px
+          select
+            padding: 0 26px 0 10px
+            height: 50px
+        .btn
+          margin-left: 0
+          height: 50px
+          font-size: 12px
+
+
+  // Surrogacy
+  #surrogacy
+    .surrogacy-list
+      grid-template-columns: 1fr
+      grid-gap: 60px 20px
+      .surrogacy
+        padding-top: 180px
+        &__info
+          padding: 0 20px 20px
+          text-align: center
+          .btn
+            padding: 12px 20px
+
+
+  // Download 2
+  #download2
+    .download2
+      padding: 20px 30px 30px
+      height: auto
+      background-position: 40% 10%
+      background-size: cover
+      .title
+        font-size: 26px
+        line-height: 1.1
+      .steps
+        margin: 25px auto 40px
+        flex-direction: column
+        background-image: none
+        grid-gap: 25px
+      .btn
+        margin: 0 auto
+
+
+  // Our Team
+  #team
+    .team
+      video
+        height: 220px
+      picture
+        .name
+          left: 60px
+        .img-user
+          max-width: 320px
+    .team-list
+      grid-template-columns: 1fr
+      grid-gap: 12px
+      &__item
+        padding: 15px 40px 15px 20px
+        position: relative
+        border-radius: 5px
+        background-image: none
+        box-shadow: 0 6px 8px 0 rgba(#a3a4a3, 0.3)
+        &:after
+          content: ""
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 15px
+          right: 12px
+          display: inline-block
+          background-image: url("../img/icons/arrow-down-circle.png")
+        &:hover
+          background-color: #ffffff
+          background-image: none
+          .title
+            color: $darkBlue
+          .description
+            color: #7B7D7D
+        .title
+          min-height: auto
+          color: $darkBlue
+          font-size: 17px
+        .description
+          font-size: 14px
+          line-height: 1.4
+          display: none
+
+
+  // Our Doctors
+  #our-doctors
+    padding: 30px 0 20px
+    background-color: $blue
+    .header
+      margin-bottom: 10px
+      .title
+        color: #ffffff
+        &:before
+          background-color: #ffffff
+    .doctors
+      margin: 0
+      .list
+        grid-template-columns: repeat(2, 1fr)
+        grid-gap: 8px
+        .info
+          grid-column: 1 / 3
+          order: -1
+          .title
+            margin: 0 auto 12px
+            max-width: 150px
+            color: #ffffff
+            font-size: 16px
+        &__item
+          padding-top: 6px
+          background-color: #EEF8FA
+          .user-img
+            height: 170px
+          .user-info
+            padding: 8px 4px
+            &__name
+              color: $blue
+              font-size: 12px
+            &__status
+              font-size: 11px
+
+  // FAQ
+  #faq
+    .faq-container
+      .right
+        .accordion-list
+          grid-gap: 10px
+          .accordion__title
+            padding: 12px 50px 12px 12px
+
+
+  // Контакты
+  #contacts
+    .contacts
+      margin: 0
+      grid-template-columns: 1fr
+      grid-gap: 50px
+      .left
+        padding: 0 20px
+        .title
+          font-size: 22px
+          text-align: center
+        form
+          margin-top: 25px
+          textarea
+            height: 170px
+          .btn
+            margin: 6px auto 0
+            width: auto
+
+
+
+  // Карта
+  #map
+    height: auto
+    grid-template-columns: 1fr
+    box-shadow: none
+    .country-selection
+      width: 100%
+      .logo
+        margin: 0 auto
+      .tabs
+        height: 100%
+        display: flex
+        flex-direction: column
+        .tabContents-block
+          .tabContent
+            padding: 12px 12px 40px
+            .title
+              font-size: 20px
+            .description
+              font-size: 14px
+            .horizontal-line
+              margin: 20px auto 20px
+            ul
+              li + li
+                margin-top: 10px
+              li
+                font-size: 14px
+                a
+                  font-size: 14px
+                &:before
+                  font-size: 15px
+    .map
+      & > *
+        height: 400px !important
+
+
+  // Подвал
+  footer
+    padding: 12px 0
+
+
+  .modal-user
+    .content
+      .user
+        display: flex
+        flex-direction: column
+        grid-gap: 40px
+
+
+  #modal-steps
+    .content
+      padding: 30px 12px 20px
+      .steps
+        grid-gap: 30px
+        .step
+          width: 40px
+          height: 40px
+          &__number
+            font-size: 14px
+          &__text
+            font-size: 10px
+      .ruler-container
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-gap: 60px
+        .ruler
+          margin-right: -40px
+          justify-self: end
+          &__item
+            padding-left: -40px
+            .title
+              margin-left: -100px
+              padding-right: 40px
+              width: auto
+              font-size: 12px
+              position: static
+              transform: none
+              text-align: right
+        .length
+          padding: 16px 0
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          justify-self: start
+          align-items: center
+          span
+            width: 100%
+            min-height: 30px
+            font-size: 14px
+            text-align: left
+            display: inline-flex
+            align-items: center
+        .ruler
+          flex-direction: column
+          grid-gap: 30px
+          &:after
+            width: 1px
+            height: 100%
+          &__item
+            position: static !important
+            left: auto !important
+            transform: none !important
+      .journal
+        &__item
+          &.description
+            p
+              font-size: 14px
+          &.img
+            img
+              border-radius: 8px 8px 0 0
+          &.doctor
+            padding: 20px 12px
+            border-radius: 0 0 8px 8px
+            .img
+              margin-top: -50px
+              width: 56px
+              height: 56px
+          &.review
+            .info
+              padding: 12px
+              border-radius: 8px
+            .user-img
+              grid-gap: 12px
+              img
+                width: 56px
+                height: 56px
+
+
+/* sm-устройства (до 361px включительно) */
+@media (max-width: 360px)
+  main
+    section
+      .header
+        .title
+          font-size: 22px
+        .description
+          font-size: 14px
+
+
+  // Well Help
+  #well-help
+    .will-help
+      .accordion
+        &__item
+          .accordion__body
+            .content
+              .info-block
+                .title
+                  font-size: 24px
+                .countries-list
+                  grid-gap: 15px 20px
+                section
+                  ul
+                    grid-template-columns: 1fr
+              .limitation-container
+                .title
+                  font-size: 22px
+                .limitation-list
+                  grid-template-columns: 1fr
+                  grid-gap: 30px 12px
+
+
+  // Download
+  #download
+    .download
+      .img1
+        margin-left: -30px
+      .img2
+        margin-left: -20px
+
+
+  // Download 2
+  #download2
+    .download2
+      background-position: 45% 10%
+
+
+  // Контакты
+  .contacts
+    .left
+      .title
+        font-size: 17px
