@@ -1170,6 +1170,40 @@
     padding: 0 15px;
   }
 
+  .b-popup {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .b-popup__bg {
+    background: #103b66;
+  }
+  .b-popup__content-inner {
+    padding: 40px 15px 0 15px;
+    background: transparent;
+  }
+
+  .b-form__label {
+    margin-bottom: 10px;
+  }
+  .b-form__label-text {
+    color: #fff;
+  }
+  .b-form__input {
+    background: #fff;
+    padding: 15px;
+  }
+
+  .x-close-btn__inner {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+  }
+  .x-close-btn__inner::before, .x-close-btn__inner::after {
+    width: 13px;
+    height: 1px;
+  }
+
   header .header__top {
     padding: 8px 0 6px;
   }

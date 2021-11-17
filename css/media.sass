@@ -973,7 +973,35 @@ $btnHoverShadow: 3px 3px 4px 0 rgba(#8c8e8c, 1)
   .container
     padding: 0 15px
 
+  .b-popup
+    align-items: flex-start
 
+    &__bg
+      background: rgba(16, 59, 102, 1)
+
+    &__content-inner
+      padding: 40px 15px 0 15px
+      background: transparent
+
+  .b-form
+
+    &__label
+      margin-bottom: 10px
+
+    &__label-text
+      color: #fff
+
+    &__input
+      background: #fff
+      padding: 15px
+  .x-close-btn
+    &__inner
+      width: 25px
+      height: 25px
+      border: 1px solid #fff
+      &::before, &::after
+        width: 13px
+        height: 1px
   // Шапка
   header
     .header__top

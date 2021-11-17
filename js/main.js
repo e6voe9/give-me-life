@@ -195,4 +195,37 @@ window.onload = function () {
     },
   });
 
+
+  //.b-popup
+
+const toggleOverflowBody = () => document.body.classList.toggle('overflow');
+
+const bPopups = document.querySelectorAll('.b-popup');
+
+const closePopup = popup => {
+  popup.classList.remove('b-popup--active');
+  toggleOverflowBody();
+};
+const openPopup = popup => {
+  popup.classList.add('b-popup--active');
+  toggleOverflowBody();
+};
+
+const broshurePopup = document.querySelector('.broshurePopup');
+const broshureBtn = document.querySelector('.broshureBtn');
+
+broshureBtn.addEventListener('click', () => openPopup(broshurePopup));
+
+if (bPopups.length !== 0) {
+
+  bPopups.forEach(popup => {
+    const bg = popup.querySelector('.b-popup__bg');
+    const closeBtn = popup.querySelector('.b-popup__x-close-btn');
+
+    bg.addEventListener('click', () => closePopup(popup));
+    closeBtn.addEventListener('click', () => closePopup(popup));
+  })
+
+}
+
 }
