@@ -33,6 +33,16 @@ body {
   font-family: "Geometria", sans-serif;
 }
 
+.map-marker {
+  cursor: pointer;
+  opacity: 0.5;
+  -webkit-transition: opacity 130ms ease-in-out;
+  transition: opacity 130ms ease-in-out;
+}
+.map-marker:hover {
+  opacity: 1;
+}
+
 .light-blue-bg {
   background-color: #F4F9FC;
 }
@@ -1865,7 +1875,7 @@ main section .header.left .title:before {
 
 #map {
   padding: 0;
-  height: 650px;
+  height: 680px;
   position: relative;
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAgMAAAAOFJJnAAAACVBMVEX6+vrn5+f09PSMzk0VAAAAGklEQVQY02MIYAADVoYECIOTYSQDWCDAgwUA204BfdYq8A4AAAAASUVORK5CYII=");
 }
