@@ -2805,6 +2805,7 @@ footer .footer-widgets .widget .soc-list .soc__item .soc-icon:before {
 .b-form__label {
   width: 100%;
   margin-bottom: 25px;
+  position: relative;
 }
 .b-form__label:last-child {
   margin-bottom: 0;
@@ -2831,4 +2832,60 @@ footer .footer-widgets .widget .soc-list .soc__item .soc-icon:before {
 }
 .b-form__btn {
   width: 100%;
+}
+.b-form__select {
+  position: relative;
+}
+.b-form__select:after, .b-form__select::before {
+  content: "";
+  width: 8px;
+  height: 1px;
+  position: absolute;
+  display: block;
+  background: #000;
+  top: 50%;
+  pointer-events: none;
+  z-index: 1;
+}
+.b-form__select::after {
+  right: 20px;
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+}
+.b-form__select::before {
+  right: 15px;
+  -webkit-transform: translateY(-50%) rotate(-45deg);
+          transform: translateY(-50%) rotate(-45deg);
+}
+.b-form__select select {
+  padding: 0 18px;
+  width: 100%;
+  height: 50px;
+  color: #000;
+  font-size: 14px;
+  display: block;
+  border: 1px solid #000;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: none;
+  cursor: pointer;
+  outline: none;
+}
+.b-form__select select option {
+  color: #103B66;
+}
+.b-form__select select option[disabled] {
+  color: #BEBEBE;
+}
+.b-form__error {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  color: red;
+  font-size: 12px;
 }

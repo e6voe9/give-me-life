@@ -4174,12 +4174,26 @@
     <div class="b-popup__bg"></div>
     <div class="b-popup__content">
       <div class="b-popup__content-inner">
-        <form action="#" class="b-form b-popup__b-form" method="POST">
+        <form action="getbroshure.php" class="b-form b-popup__b-form broshureForm" method="POST">
           <label class="b-form__label">
-            <span class="b-form__label-text">YOUR EMAIL*</span>
+            <span class="b-form__label-text">Your email*</span>
             <input type="text" class="b-form__input" placeholder="Enter your email" name="email">
+            <span class="b-form__error">Error, please enter valid email!</span>
           </label>
-          <button class="btn b-form__btn">SEND</button>
+          <label class="b-form__label">
+            <span class="b-form__label-text">Your Marital status*</span>
+            <div class="b-form__select">
+              <select name="status">
+                <option value="" selected disabled>Your Marital status</option>
+                <option value="LGBT">LGBT</option>
+                <option value="Single">Single man</option>
+                <option value="Married">Hetero married couple</option>
+                <option value="Unmarried">Hetero unmarried couple</option>
+              </select>
+            </div>
+            <span class="b-form__error">Error, please choose a status!</span>
+          </label>
+          <button class="btn b-form__btn" type="submit">SEND</button>
         </form>
       </div>
     </div>

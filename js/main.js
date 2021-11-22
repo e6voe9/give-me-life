@@ -198,34 +198,87 @@ window.onload = function () {
 
   //.b-popup
 
-const toggleOverflowBody = () => document.body.classList.toggle('overflow');
+  const toggleOverflowBody = () => document.body.classList.toggle('overflow');
 
-const bPopups = document.querySelectorAll('.b-popup');
+  const bPopups = document.querySelectorAll('.b-popup');
 
-const closePopup = popup => {
-  popup.classList.remove('b-popup--active');
-  toggleOverflowBody();
-};
-const openPopup = popup => {
-  popup.classList.add('b-popup--active');
-  toggleOverflowBody();
-};
+  const closePopup = popup => {
+    popup.classList.remove('b-popup--active');
+    toggleOverflowBody();
+  };
+  const openPopup = popup => {
+    popup.classList.add('b-popup--active');
+    toggleOverflowBody();
+  };
 
-const broshurePopup = document.querySelector('.broshurePopup');
-const broshureBtn = document.querySelector('.broshureBtn');
+  const broshurePopup = document.querySelector('.broshurePopup');
+  const broshureBtn = document.querySelector('.broshureBtn');
 
-broshureBtn.addEventListener('click', () => openPopup(broshurePopup));
+  broshureBtn.addEventListener('click', () => openPopup(broshurePopup));
 
-if (bPopups.length !== 0) {
+  if (bPopups.length !== 0) {
 
-  bPopups.forEach(popup => {
-    const bg = popup.querySelector('.b-popup__bg');
-    const closeBtn = popup.querySelector('.b-popup__x-close-btn');
+    bPopups.forEach(popup => {
+      const bg = popup.querySelector('.b-popup__bg');
+      const closeBtn = popup.querySelector('.b-popup__x-close-btn');
 
-    bg.addEventListener('click', () => closePopup(popup));
-    closeBtn.addEventListener('click', () => closePopup(popup));
+      bg.addEventListener('click', () => closePopup(popup));
+      closeBtn.addEventListener('click', () => closePopup(popup));
+    })
+
+  }
+
+
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+  const broshureForm = document.querySelector('.broshureForm');
+
+  broshureForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let formData = {
+      email: broshureForm.email.value.trim(),
+      status: broshureForm.status.value,
+    }
+
+    const emailErrorBlock = broshureForm.email.nextElementSibling;
+
+    if (!validateEmail(formData.email)) {
+      emailErrorBlock.style.display = 'block';
+      setTimeout(() => {
+        emailErrorBlock.style.display = 'none';
+      }, 3000)
+      return;
+    }
+
+    const statusErrorBlock = broshureForm.status.parentElement.nextElementSibling;
+
+    if (formData.status === '') {
+      statusErrorBlock.style.display = 'block';
+      setTimeout(() => {
+        statusErrorBlock.style.display = 'none';
+      }, 3000)
+      return;
+    }
+
+    console.log(formData);
+    // let request = new XMLHttpRequest();
+    // const mailFileName = broshureForm.getAttribute("action");
+
+    // request.addEventListener("load", function () {
+    //   // when response is 200
+    // })
+    
+    // request.open("POST", mailFile, true);
+    // request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+
+    // request.send(
+    //   "totalPrice=" + encodeURIComponent(formData.totalPrice) +
+    //   "&order=" + encodeURIComponent(formData.order) 
+    // )
   })
 
-}
 
 }
